@@ -1,0 +1,83 @@
+﻿
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+  
+ <style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+
+<script src="HTTP2019.js"></script>
+</head>
+<body>
+
+    <p>
+        <input id="Button2" onclick="showData();" type="button" value="ShowData" /></p>
+        <table id = "t1"   />
+       
+
+</body>
+   <script src="Cookie.js"></script> 
+   <script src="addTableEvent.js"></script>
+   <script>
+       var myObj = [{ "Number": "1", "Sect": "明教", "Bodytype": "成男" },
+                    { "Number": "2", "Sect": "純陽", "Bodytype": "正太" },
+                    { "Number": "3", "Sect": "天策", "Bodytype": "成男" },
+                    { "Number": "4", "Sect": "七秀", "Bodytype": "蘿莉" }];
+
+       function rowClickFunction(cid) {
+           //  alert("id:" + cId);
+           setCookie("Sect", cid, 1);
+           setCookie("Bodytype", cid, 1);
+           // match clicked id with JSON data id
+           for (var i = 0; i < myObj.length; i++) {
+               if (cid == myObj[i].Number) {
+                   setCookie("Sect", myObj[i].Sect, 1);
+                   setCookie("Bodytype", myObj[i].Bodytype, 1);
+               } 
+           }
+           
+           window.open("Detail.html");
+       }
+
+
+
+       function showData() {
+           // alert(ret);
+           // ret defined in HTTP2019.js for keep the response value
+           //  var myObj = JSON.parse(ret);
+           //  alert(myObj.length);
+
+
+           var tableStr = "<tr><th>Number</th> <th>Sect</th> <th >Bodytype</th></tr>";
+           for (i = 0; i < myObj.length; i++) {
+               // alert(myObj[i].name);
+               var trStr = "<tr>";
+               value = i + 1;
+               trStr = trStr + "<td>";
+               trStr = trStr + value;
+               trStr = trStr + "</td>";
+
+               trStr = trStr + "<td>";
+               trStr = trStr + myObj[i].Sect;
+               trStr = trStr + "</td>";
+
+               trStr = trStr + "<td>";
+               trStr = trStr + myObj[i].Bodytype;
+               trStr = trStr + "</td>";
+
+               trStr = trStr + "</tr>";
+               tableStr = tableStr + trStr;
+           }
+
+
+           document.getElementById("t1").innerHTML = tableStr;
+           addRowHandlers("t1");   // add event to table t1
+
+       }
+        </script>
+</html>

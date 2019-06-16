@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- jQuery v1.9.1 -->
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<!-- Slidebars v2.0.2 -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/slidebars/2.0.2/slidebars.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slidebars/2.0.2/slidebars.min.js"></script>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+  
+ <style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+
+<script src="HTTP2019.js"></script>
+</head>
+<body>
+
+    <p>
+        <input id="Button1" onclick="getData();"  type="button" value="getData" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input id="Button2" onclick="showData();" type="button" value="ShowData" /></p>
+        <table id = "t1"   />
+       
+
+</body>
+        <script>
+            
+            
+            function getData() {
+                //HTTPGetData("http://203.64.84.214:8003/httptest/Get.aspx?id=miPersondata");
+                HTTPGetData("Get.aspx?id=newPatient");
+            }
+
+            function showData() {
+                // alert(ret);
+                // ret defined in HTTP2019.js for keep the response value
+                var myObj = JSON.parse(ret);
+              //  alert(myObj.length);
+
+                var obj = JSON.parse('{"S":"", "B":"","R":"" }');
+                var tableStr = "<tr><th>Sect</th> <th >Bodytype</th> <th >Reason</th></tr>";
+
+                for (i = 0; i < myObj.length; i++) {
+                    // alert(myObj[i].S);
+                    var trStr = "<tr>";
+
+                    trStr = trStr + "<td align='center'>";
+                    trStr = trStr + myObj[i].S;
+                    trStr = trStr + "</td>";
+
+                    trStr = trStr + "<td>";
+                    trStr = trStr + myObj[i].B;
+                    trStr = trStr + "</td>";
+
+                    trStr = trStr + "<td>";
+                    trStr = trStr + myObj[i].R;
+                    trStr = trStr + "</td>";
+
+                    trStr = trStr + "</tr>";
+                    tableStr = tableStr + trStr;
+                }
+            
+                // 表格字串字串在id為"t1"的"table"標簽内
+                document.getElementById("t1").innerHTML = tableStr;
+
+               
+            }
+        </script>
+</html>

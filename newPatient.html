@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- jQuery v1.9.1 -->
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<!-- Slidebars v2.0.2 -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/slidebars/2.0.2/slidebars.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slidebars/2.0.2/slidebars.min.js"></script>
+<head>
+    <title>劍三調查</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe|ZCOOL+QingKe+HuangYou|ZCOOL+XiaoWei&display=swap" />
+    <style>
+        body {
+            font-family: 'ZCOOL QingKe HuangYou', cursive;
+            font-size: 20px;
+            color: palevioletred;
+        }
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script type="text/javascript" charset="UTF-8"></script>
+    <script src="HTTP2019.js"></script>
+    <script language="JavaScript">
+        VIH_DisplayOnPage = "no";
+    </script>
+    <script language="JavaScript" src="http://scripts.hashemian.com/js/visitorIPHOST.js.php"></script>
+    <script>
+        function myf() {
+            var text = '{"S":"", "B":"","R":"","IP":""}';
+            var obj = JSON.parse(text);
+            obj.S = document.getElementById("Sect1").value;
+            obj.B = document.getElementById("Bodytype1").value;
+            obj.R = document.getElementById("reason").value;
+            obj.IP = VIH_HostIP;
+
+            var myJSONstr = JSON.stringify(obj);
+            alert(myJSONstr);
+            //var encodedData = btoa(myJSONstr);
+            HTTPPostData("Post.aspx?id=newPatient", myJSONstr);
+        }
+    </script>
+    <style type="text/css">
+        #reason {
+            height: 100px;
+            width: 307px;
+        }
+    </style>
+</head>
+<body background="2018-11-24_18-52-51-000.jpg">
+    <fieldset style="background-color: transparent;border: 0;">
+        <!-- Sidebar (hidden by default) -->
+        <div style="background-color: transparent;border: 0;" canvas="container">
+            <button class="left-slidebar">≡</button>
+        </div>
+        <div off-canvas="example-1 left reveal" >
+            <a href="HtmlPage.html"><span style='font-size: 48px;'>首頁<br />
+                <br />
+            </span></a>
+            <a href="j3MUSIC.html"><span style='font-size: 48px;'>劍三同人曲<br />
+                <br />
+            </span></a>
+            <a href="j3Introduce.html"><span style='font-size: 48px;'>門派介紹<br />
+                <br />
+            </span></a>
+            <a href="j3Pet.html"><span style='font-size: 48px;'>劍三蹲寵<br />
+                <br />
+            </span></a>
+            <a href="newPatient.html"><span style='font-size: 48px;'>喜好調查<br />
+                <br />
+            </span></a>
+        </div>
+    </fieldset>
+    <fieldset align="center" style="border: 0;">
+       <span style="font-size:58px">劍三門派體型喜好調查</span><br/>
+    <br/><span style="font-size:32px">&nbsp;&nbsp; 門派：</span>
+  <select id= "Sect1" name="Sect">
+    <option value="七秀">七秀</option>
+    <option value="蓬萊">蓬萊</option>
+    <option value="蒼雲">蒼雲</option>
+    <option value="藏劍">藏劍</option>
+    <option value="天策">天策</option>
+    <option value="萬花">萬花</option>
+    <option value="純陽">純陽</option>
+    <option value="五毒">五毒</option>
+    <option value="長歌">長歌</option>
+    <option value="少林">少林</option>
+    <option value="明教">明教</option>
+    <option value="霸刀">霸刀</option>
+    <option value="丐幫">丐幫</option>
+    <option value="唐門">唐門</option>
+  </select><br/><br/>    <br/><span style="font-size:32px">&nbsp;&nbsp; 體型：</span>
+     
+  <select id= "Bodytype1" name="Bodytype">
+    <option value="成男" style ="display:block">成男</option>
+    <option value="成女">成女</option>
+    <option value="正太">正太</option>
+    <option value="蘿莉">蘿莉</option>
+    </select><br/>
+        <br />    <br/><span style="font-size:32px">喜歡原因:&nbsp;</span><br/>
+    <input type="text" name="Reason" id="reason"/><br/><br/>    <button type="button" onclick="myf()">確定</button><br/><br/>    <a href="#" onclick="window.open(' getData2Table.html ', '統計結果', config='height=500,width=500');">查看統計結果</a>
+    </fieldset>
+    <script>
+        var controller = new slidebars();
+        controller.init(); // 初始化
+        $(".left-slidebar").on("click", function (event) {
+            event.stopPropagation();
+            controller.toggle("example-1"); // 打開或關閉側欄選單
+        });
+    </script>
+</body>
+</html>

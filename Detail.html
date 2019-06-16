@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0048)https://107316101.github.io/JavaScript1/HtmlPage -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title></title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe&display=swap" />
+    <style type="text/css">
+        body {
+            font-family: 'ZCOOL KuaiLe', cursive;
+            font-size: 20px;
+            color: palevioletred;
+        }
+        #printf {
+            height: 154px;
+            width: 404px;
+        }
+        #reason {
+            height: 135px;
+            width: 294px;
+        }
+    </style>
+<script src="Cookie.js"></script> 
+</head>
+     
+<body background="2019-05-24_00-22-13-000.jpg" style="background-repeat:no-repeat;background-attachment:fixed;background-position:center center">
+
+    <form action="http://203.64.84.113/x/RQ_RS.aspx" method="post">
+
+        <table border="0" id="PetName" style="margin-left:auto;margin-right:auto;text-align: center; font-size: 18px; height: 72px; width:300px;">
+        </table>
+
+        <table border="1" id="music" style="margin-left:auto;margin-right:auto;text-align: center; font-size: 18px; height: 382px; width:896px;">
+        </table>
+
+        <script>
+            var PN;
+            PN = "";
+            PN += "<tr>";
+            PN += "<td>";
+            PN += "<p align='center'><span style='font-size: 72px;color:#850085'>" + getCookie('Pet') + "</span></p>";
+            PN += "</td>";
+            PN += "</tr>";
+            document.getElementById("PetName").innerHTML = PN;
+
+            var box;
+            box = "";
+            box += "<tr>";
+            box += "<td align='center'>";
+            box += "<img src='" + getCookie('Part1img') + "' style='height: 448px; width: 448px'>";
+            box += "</td>";
+            box += "<td align='center'>";
+            box += "<span style='font-size:24px;color:#850085'>&nbsp;&nbsp;" + getCookie('Part1') + "</span>"
+            box += "</td>";
+            box += "<tr>";
+            box += "<td align='center'>";
+            box += "<img src='" + getCookie('Part2img') + "' style='height: 448px; width: 448px'>";
+            box += "</td>";
+            box += "<td align='center'>";
+            box += "<span style='font-size:24px;color:#850085'>&nbsp;&nbsp;" + getCookie('Part2') + "</span>"
+            box += "</td>";
+            box += "<tr>";
+            box += "<td align='center'>";
+            box += "<img src='" + getCookie('Part3img') + "' style='height: 448px; width: 448px'>";
+            box += "</td>";
+            box += "<td align='center'>";
+            box += "<span style='font-size:24px;color:#850085'>&nbsp;&nbsp;" + getCookie('Part3') + "</span>"
+            box += "</td>";
+            box += "</tr>";
+            document.getElementById("music").innerHTML = box;
+        </script>
+      
+      
+    </form></body>
+</html>

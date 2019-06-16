@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title></title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe|ZCOOL+QingKe+HuangYou|ZCOOL+XiaoWei&display=swap" />
+    <style>
+        body {
+            font-family: 'ZCOOL QingKe HuangYou', cursive;
+            font-size: 48px;
+        }
+
+        .auto-style2 {
+            width: 896px;
+        }
+    </style>
+</head>
+<script>
+    function compare(data) {
+        var str1, str;
+        for (i = 0; i < 14; i++) {
+            str = "compare" + i;
+            document.getElementById(str).style.display = "none";
+        }
+        str1 = "compare" + data;
+        document.getElementById(str1).style.display = "block";
+    }
+</script>
+
+<body>
+    <table border="0" style="position: fixed;width:100%;background:white;top:0px;left:0px">
+　   <tr>
+　   <td><a href="HtmlPage.html"><span style='font-size: 30px;'>首頁</span></a></td>
+　   <td><a href="j3MUSIC.html"><span style='font-size: 30px;'>劍三同人曲</span></a></td>
+     <td><a href="j3Introduce.html"><span style='font-size: 30px;'>門派介紹</span></a></td>
+      <td><a href="j3Pet.html"><span style='font-size: 30px;'>劍三蹲寵</span></a></td>
+      <td><a href="newPatient.html"><span style='font-size: 30px;'>喜好調查</span></a></td>
+　</tr>
+    </table>
+
+        <center><br /><span style="font-size: 84px; color: #8C0044">劍三門派介紹</span><br />
+        <table border="1">
+            <tr>
+                <td style="width: 100px;">
+                    <div style="height: 500px; overflow-x: hidden; overflow-y: scroll;">
+                        <table id="Sect" rules="rows">
+                            <!--
+                <tr>
+                    <td onclick="compare(0)">
+                        <img src="flower.jpg" style="height: 95px; width: 95px" />
+                    </td>
+                </tr>
+                    <tr>
+                <td onclick="compare(1)">
+                    <img src="sheep.jpg" style="height: 95px; width: 95px" />
+                </td>
+                </tr><tr>
+                <td onclick="compare(2)" class="auto-style9">
+                    <img src="bunny.jpg" style="height: 95px; width: 95px" />
+                </td>
+                </tr><tr>
+                <td onclick="compare(3)" class="auto-style10">
+                    <img src="buddha.jpg" style="height: 95px; width: 95px" />
+                </td>
+                </tr><tr>
+                <td onclick="compare(4)" class="auto-style8">
+                    <img src="dog.jpg" alt="" style="height: 95px; width: 95px" />
+                </td>
+                </tr><tr>
+                <td onclick="compare(5)" class="auto-style6">
+                     <img src="chicken.jpg" style="height: 95px; width: 95px" />
+                </td>
+                </tr><tr>
+                <td onclick="compare(6)" class="auto-style8">
+                     <img src="poison.jpg" style="height: 95px; width: 95px" />
+                </td>
+                </tr><tr>
+                <td onclick="compare(7)" class="auto-style6">
+                     <img src="tangmen.jpg" style="height: 95px; width: 95px" />
+                </td>
+                </tr><tr>
+                <td onclick="compare(8)" class="auto-style8">
+                     <img src="cat.jpg" style="height: 95px; width: 95px" />
+                </td>
+                </tr><tr>
+                <td onclick="compare(9)" class="auto-style6">
+                     <img src="beggar.jpg" style="height: 95px; width: 95px" />
+                </td> 
+                </tr><tr>      
+                <td onclick="compare(10)" class="auto-style11">
+                     <img src="shield.jpg" style="height: 95px; width: 95px" />
+                </td>
+                </tr><tr>
+                <td onclick="compare(11)" class="auto-style12">
+                     <img src="blaster.png" style="height: 95px; width: 95px" />
+                </td>
+                </tr><tr>
+                <td onclick="compare(12)" class="auto-style8">
+                     <img src="zither.jpg" style="height: 95px; width: 95px" />
+                </td>
+                </tr><tr>
+                <td onclick="compare(13)" class="auto-style6">
+                     <img src="penglai.jpg" style="height: 95px; width: 95px" />
+                </td>
+                </tr>      
+                   -->
+                        </table>
+                    </div>
+                </td>
+                <td id="intro" class="auto-style2">
+                    <!--
+                <div id="compare0" style="display:none">
+                    <span style="position:absolute;font-size:100px;opacity:1;color:#E8CCFF">&nbsp;萬花</span>
+                    <img src="flowerback.jpg" style="height: 744px; width: 896px;background-size:cover;opacity: 0.3;z-index:-1" />
+                </div>
+                <div id="compare1" style="display:none">
+                    <head><font color="#33FFFF"><font face="標楷體"><span style="font-size:68px;">純陽</span></font></font></head> 
+                </div>
+                <div id="compare2" style="display:none">
+                    <span style="position:absolute;font-size:100px;opacity:1;color:#FF77FF">&nbsp;七秀</span>
+                    <img src="bunnyback.jpg" style="height: 744px; width: 896px;background-size:cover;opacity: 0.3;z-index:-1" />
+                </div>
+                <div id="compare3" style="display:none">
+                    <head><font color="#FFBB66"><font face="標楷體"><span style="font-size:68px;"><b>少林</b></span></font></font></head>
+                </div>
+                <div id="compare4" style="display:none">
+                    <head><font color="#FF7744"><font face="標楷體"><span style="font-size:68px;">天策</span></font></font></head>
+                </div>
+                <div id="compare5" style="display:none">
+                    <span style="position:absolute;font-size:100px;opacity:1;color:#FFFF33">&nbsp;藏劍</span>
+                    <img src="chickenback.jpg" style="height: 744px; width: 896px;background-size:cover;opacity: 0.3;z-index:-1" />
+                </div>
+                <div id="compare6" style="display:none">
+                    <span style="position:absolute;font-size:100px;opacity:1;color:#009FCC">&nbsp;五毒</span>
+                    <img src="poisonback.jpg" style="height: 744px; width: 896px;background-size:cover;opacity: 0.3;z-index:-1" />
+                </div>
+                <div id="compare7" style="display:none">
+                    <head><font color="#88AA00"><font face="標楷體"><span style="font-size:68px;"><b>唐門</b></span></font></font></head>
+                </div>
+                <div id="compare8" style="display:none">                   
+                    <span style="position:absolute;font-size:100px;opacity:1;color:#FF3333">&nbsp;明教</span>
+                    <img src="catback.jpg" style="height: 744px; width: 896px;background-size:cover;opacity: 0.3;z-index:-1" />
+                </div>
+                <div id="compare9" style="display:none">                    
+                    <span style="position:absolute;font-size:100px;opacity:1;color:#CC6600">&nbsp;丐幫</span>
+                    <img src="beggarback.jpg" style="height: 744px; width: 896px;background-size:cover;opacity: 0.3;z-index:-1" />
+                </div>
+                <div id="compare10" style="display:none">                    
+                    <span style="position:absolute;font-size:100px;opacity:1;color:#AA0000">&nbsp;蒼雲</span>
+                    <img src="shieldback.jpg" style="height: 744px; width: 896px;background-size:cover;opacity: 0.3;z-index:-1" />
+                </div>
+                <div id="compare11" style="display:none">                    
+                    <span style="position:absolute;font-size:100px;opacity:1;color:#3A0088">&nbsp;霸刀</span>
+                    <img src="blasterback.jpg" style="height: 744px; width: 896px;background-size:cover;opacity: 0.3;z-index:-1" />
+                </div>
+                <div id="compare12" style="display:none">         
+                    <span style="position:absolute;font-size:100px;opacity:1;color:#33FFAA">&nbsp;長歌</span>
+                    <img src="zeitherback.jpg" style="height: 744px; width: 896px;background-size:cover;opacity: 0.3;z-index:-1" />
+                </div>
+                <div id="compare13" style="display:none">     
+                    <span style="position:absolute;font-size:100px;opacity:1;color:#BBFFEE">&nbsp;蓬萊<br/></span></span>                    
+                    <img src="penglaiback.jpg" style="height: 744px; width: 896px;background-size:cover;opacity: 0.3;z-index:-1" />
+                </div>
+                    -->
+                </td>
+            </tr>
+        </table>
+        </center>
+        <script>
+            var a = [];
+            a.push("flower.jpg");
+            a.push("sheep.jpg");
+            a.push("bunny.jpg");
+            a.push("buddha.jpg");
+            a.push("dog.jpg");
+            a.push("chicken.jpg");
+            a.push("poison.jpg");
+            a.push("tangmen.jpg");
+            a.push("cat.jpg");
+            a.push("beggar.jpg");
+            a.push("shield.jpg");
+            a.push("blaster.png");
+            a.push("zither.jpg");
+            a.push("penglai.jpg");
+            var b = [];
+            b.push(["#C678FF", "萬花", "<span style='font-size:48px;'>心法：</span><li>遠程輸出(內功)：花間遊</li><li>奶媽(內功)：離經易道</li><span style='font-size:48px;'>體型：</span><li>成男：通常被稱作花哥</li><li>成女：通常被稱作花姊</li><li>蘿莉：通常被稱作花蘿</li><li>正太：通常被稱作花太</li>", "flowerback.jpg"]);
+            b.push(["#33FFFF", "純陽", "<span style='font-size:48px;'>心法：</span><li>遠程輸出(內功)：紫霞功</li><li>近戰輸出(外功)：太虛劍意</li><span style='font-size:48px;'>體型：</span><li>成女：通常被稱作道姑</li><li>成男：通常被稱作道長</li><li>蘿莉：通常被稱作咩蘿</li><li>正太：通常被稱作咩太</li>", "sheepback.jpg"]);
+            b.push(["#FF77FF", "七秀", "<span style='font-size:48px;'>心法：</span><li>遠程輸出(內功)：冰心訣</li><li>奶媽(內功)：雲裳心經</li><span style='font-size:48px;'>體型：</span><li>成女：通常被稱作秀姊、秀娘</li><li>蘿莉：通常被稱作秀蘿</li><li>正太：通常被稱作秀太</li><li>因七秀不收成年男子，故無成男</li>", "bunnyback.jpg"]);
+            b.push(["#FFBB66", "少林", "<span style='font-size:48px;'>心法：</span><li>近戰輸出(內功)：易筋經</li><li>坦克(內功)：洗髓經</li><span style='font-size:48px;'>體型：</span><li>成男：通常被稱作大師</li><li>正太：通常被稱作小燈泡</li><li>因少林不收女施主，故無成女和蘿莉</li>", "buddhaback.jpg"]);
+            b.push(["#FF7744", "天策", "<span style='font-size:48px;'>心法：</span><li>近戰輸出(外功)：傲血戰意</li><li>坦克(外功)：鐵牢律</li><span style='font-size:48px;'>體型：</span><li>成男：通常被稱作軍爺</li><li>成女：通常被稱作軍娘</li><li>蘿莉：通常被稱作軍蘿</li><li>正太：通常被稱作策太</li>", "dogback.jpg"]);
+            b.push(["#FFFF0F", "藏劍", "<span style='font-size:48px;'>心法：</span><li>近戰輸出(外功)：山居劍意</li><li>近戰輸出(外功)：問水訣</li><span style='font-size:48px;'>體型：</span><li>成男：通常被稱作二少</li><li>成女：通常被稱作二小姐</li><li>蘿莉：通常被稱作雞蘿</li><li>正太：通常被稱作雞太</li>", "chickenback.jpg"]);
+            b.push(["#009FCC", "五毒", "<span style='font-size:48px;'>心法：</span><li>遠程輸出(內功)：毒經</li><li>奶媽(內功)：補天訣</li><span style='font-size:48px;'>體型：</span><li>成男：通常被稱作毒哥</li><li>成女：通常被稱作毒姊</li><li>蘿莉：通常被稱作毒蘿</li><li>正太：通常被稱作毒太</li>", "poisonback.jpg"]);
+            b.push(["#88AA00", "唐門", "<span style='font-size:48px;'>心法：</span><li>遠程輸出(外功)：驚羽訣</li><li>遠程輸出(內外功)：天羅詭道</li><span style='font-size:48px;'>體型：</span><li>成男：通常被稱作炮哥</li><li>成女：通常被稱作炮姊</li><li>蘿莉：通常被稱作炮蘿</li><li>正太：通常被稱作炮太</li>", "tangmenback.jpg"]);
+            b.push(["#FF3333", "明教", "<span style='font-size:48px;'>心法：</span><li>近戰輸出(內功)：焚影聖訣</li><li>坦克(外功)：明尊琉璃體</li><span style='font-size:48px;'>體型：</span><li>成男：通常被稱作喵哥</li><li>成女：通常被稱作喵姊</li><li>蘿莉：通常被稱作喵蘿</li><li>正太：通常被稱作喵太</li>", "catback.jpg"]);
+            b.push(["#CC6600", "丐幫", "<span style='font-size:48px;'>心法：</span><li>近戰輸出(外功)：笑塵訣</li><span style='font-size:48px;'>體型：</span><li>成男：通常被稱作丐哥</li><li>成女：通常被稱作丐姊</li><li>蘿莉：通常被稱作丐蘿</li><li>正太：通常被稱作丐太</li>※是個很愛蹲奶的職業", "beggarback.jpg"]);
+            b.push(["#AA0000", "蒼雲", "<span style='font-size:48px;'>心法：</span><li>近戰輸出(外功)：分山勁</li><li>坦克(外功)：鐵骨衣</li><span style='font-size:48px;'>體型：</span><li>成男：通常被稱作蒼爹</li><li>成女：通常被稱作盾娘</li><li>蘿莉：通常被稱作盾蘿</li><li>正太：通常被稱作盾太</li>", "shieldback.jpg"]);
+            b.push(["#3A0088", "霸刀", "<span style='font-size:48px;'>心法：</span><li>遠程輸出(外功)：北傲訣</li><span style='font-size:48px;'>體型：</span><li>成男：通常被稱作霸爸</li><li>成女：通常被稱作刀娘</li><li>蘿莉：通常被稱作刀蘿</li><li>正太：通常被稱作刀太</li>", "blasterback.jpg"]);
+            b.push(["#33FFAA", "長歌", "<span style='font-size:48px;'>心法：</span><li>遠程輸出(內功)：莫問</li><li>奶媽(內功)：相知</li><span style='font-size:48px;'>體型：</span><li>成男：通常被稱作琴爹</li><li>成女：通常被稱作琴娘</li><li>蘿莉：通常被稱作鴿蘿</li><li>正太：通常被稱作鴿太</li>", "zitherback.jpg"]);
+            b.push(["#77DDFF", "蓬萊", "<span style='font-size:48px;'>心法：</span><li>近戰輸出(外功)：凌海訣</li><span style='font-size:48px;'>體型：</span><li>成男：通常被稱作傘爹</li><li>成女：通常被稱作傘娘</li><li>蘿莉：通常被稱作傘蘿</li><li>正太：通常被稱作傘太</li>", "penglaiback.jpg"]);
+
+            var left;
+            left = "";
+            var right;
+            right = "";
+            for (i = 0; i < a.length; i++) {
+                left += "<tr>";
+                left += "<td onclick='compare(" + i + ")'>";
+                left += "<img src='" + a[i] + "' style='height: 95px; width: 95px' />";
+                left += "</td>";
+                left += "</tr>";
+            }
+            for (i = 0; i < b.length; i++) {
+                right += "<div id='compare" + i + "' style='display:none'>";
+                right += "<span style='position:absolute;font-size:82px;opacity:1;color:" + b[i][0] + "'>" + b[i][1] + "<span style='font-size:36px;'><br/>" + b[i][2] + "</span></span>";
+                right += "<img src='" + b[i][3] + "' style='height: 500px; width: 896px;background-size:cover;opacity: 0.3;z-index:-1' />";
+                right += "</div>";
+            }
+            document.getElementById("Sect").innerHTML = left;
+            document.getElementById("intro").innerHTML = right;
+        </script>
+</body>
+</html>

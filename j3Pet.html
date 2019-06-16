@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe&display=swap" />
+    <style>
+        body {
+            font-family: 'ZCOOL KuaiLe', cursive;
+            font-size: 20px;
+            color: palevioletred;           
+        }
+    </style>
+ <style>
+table, th, td {
+  border: 1px solid black;
+  margin-left:auto; 
+  margin-right:auto;
+  height: 70px;
+  width:300px;
+  font-size:40px;
+  color:#1212FF;
+}
+</style>
+   
+<script src="HTTP2019.js"></script>
+</head>
+<body background="2019-06-03_00-09-49-000.jpg" style="background-repeat:no-repeat;background-attachment:fixed;background-position:center center">
+     <table border="1" style="text-align:center;position: fixed;height: 100% ;width:150px;background:#AC3BFF;top:0px;left:0px">
+　   <tr>
+　   <td><a href="HtmlPage.html"><span style='font-size: 30px;'>首页</span></a></td>
+     </tr>
+     <tr>
+　   <td><a href="j3MUSIC.html"><span style='font-size: 30px;'>剑三同人曲</span></a></td>
+     </tr>
+     <tr>
+     <td><a href="j3Introduce.html"><span style='font-size: 30px;'>门派介绍</span></a></td>
+     </tr>
+     <tr>
+     <td><a href="j3Pet.html"><span style='font-size: 30px;'>剑三蹲宠</span></a></td
+     </tr>
+     <tr>
+     <td><a href="newPatient.html"><span style='font-size: 30px;'>喜好调查</span></a></td>
+　   </tr>
+    </table>
+    <center>
+    <span style="text-align:center;font-size:72px;color:#1212FF;">剑三蹲宠</span><br/><br/>
+    <input id="Button2" onclick="showData();" type="button" value="ShowData" /></center>
+    <table id = "t1"></table>
+       
+
+</body>
+   <script src="Cookie.js"></script> 
+   <script src="addTableEvent.js"></script>
+   <script>
+       var myObj = [{ "Number": "1", "Pet": "嘟嘟", "Part1": "首先，到南屏山,并和NPC〝车山果〞(NPC的位置如左图)对话，会有一个〝冰泉之水〞的BUFF，若接不到说明已被别人抓走！", "Part1img": "DoNPC.JPG", "Part2": "接著，他会让你过索桥，去采名为〝青头草〞的草药(青头草的位置如左图),并须在一定时间内将草药交给NPC", "Part2img": "Do.JPG", "Part3": "在时间内将草药交给NPC后，他会给你任务，做完后会获得〝彩色石子〞，之后连续做10天就有一只嘟嘟(长相为左图)了！", "Part3img": "DoDo.JPG" },
+                    { "Number": "2", "Pet": "静静", "Part1": "在长安西市内的两边门口会隔几个小时出现小狗〝静静〞，若没有人拾取它，它会在大街内闲逛，看到后和它对话即可拾取。", "Part1img": "QuietQuiet.JPG", "Part2": "拿到任务物品〝小静静〞后，去找NPC〝六指神丐〞(蓝点位置)对话，再去找NPC〝周钰彤〞(紫点位置)接任务", "Part2img": "QuietNPC.JPG", "Part3": "任务为：到地宫打出10个〝蛇胆〞并交付给〝周钰彤〞，交付后会获得〝龙胆酒〞，之后连续做10天就有一只静静(长相为左图)了！", "Part3img": "Quiet.JPG" },
+                    { "Number": "3", "Pet": "果果", "Part1": "成功获得了任务物品〝坚果〞(随机在某一红框位置出现)后，先到太原城找NPC公冶麟(蓝点位置)和果果", "Part1img": "Guo.JPG", "Part2": "把坚果交给果果之后，NPC会让我们去帮他找寻狼牙军营分布图(位置如图一红框所示)获得后回去和NPC交任务，可以接到一个新的任务，这个任务让我们帮忙去找苍云弟子沈息凡(位置在图一蓝点)，他要我们到贮木场去帮忙寻找，到贮木场找NPC欧潺子(位置如图二红框所示)，取得他的信任后，回去找沈息凡，待他修补好图谱后回去找公冶麟", "Part2img": "GuoNPC.JPG", "Part3": "公冶麟会给我们一个任务，让我们去帮忙烧掉狼牙军的攻城器械(位置如左图一所示)，完成后回去找NPC公冶麟对话上交任务，会获得〝嘉奖令〞，之后连续做10天就有一只果果(长相为图二)了！", "Part3img": "GuoGuo.JPG" },
+                    { "Number": "4", "Pet": "小诺", "Part1": "成功获得了任务物品〝破旧的纸卷〞后，在包包中会显示破旧的纸卷〝烤羊腿秘方〞", "Part1img": "nuonuo.JPG", "Part2": "捡到后去找〝高大胖〞(紫点位置)，交给他并和他对话，他会要你帮他找些芹菜回来。厨子会让你讲烤羊腿带给〝武大豪〞(蓝点位置)。来到〝武大豪〞面前，你会听到大石头后面好像有什么动静。然后你就会看到〝小诺〞了。和它对话，就会显示要给牠吃烤羊腿，喂完再回去找厨子再要一份烤羊腿给〝武大豪〞。", "Part2img": "nounouNPC.JPG", "Part3": "之后，〝武大豪〞就会让你帮他检查下他在附近设的捕兽夹。〝武大豪〞会让你帮他三次，第三次要修的捕兽夹和前两次的不一样。后会触发剧情，〝小诺〞会受伤，将他交给〝武大豪〞，他会让你去悬崖处采集三份草药(蓝点位置)，找齐三份草药之后带回去给〝武大豪〞，之后连续做10天就有一只小诺(长相为左图)了！", "Part3img": "XiaoNuo.JPG" },
+                    { "Number": "5", "Pet": "小花", "Part1": "成功获得了任务物品〝泥娃娃〞后，去找NPC〝方小兰〞(红点位置)", "Part1img": "huahua.JPG", "Part2": "和〝方小兰〞对话，听她讲故事，去找她的奶奶方陈氏(黄点位置)，并救出她。接着去找她大爷(紫点位置)，再去找她弟弟〝方小石〞(绿点位置)。他会要你去找小刺猬(红点位置)，拿到刺猬后，再去回复方小石。", "Part2img": "XiaohuaNPC.JPG", "Part3": "完成任务后，你就会获得〝小刺猬．小花〞，将它养大后，你就有一只小花(长相为左图)了！", "Part3img": "Xiaohua.JPG" }];
+       function rowClickFunction(cid) {
+           //  alert("id:" + cId);
+           setCookie("Pet", cid, 1);
+           setCookie("Course", cid, 1); 
+           // match clicked id with JSON data id
+           for (var i = 0; i < myObj.length; i++) {
+               if (cid == myObj[i].Number) {
+                   setCookie("Pet", myObj[i].Pet, 1);
+                   setCookie("Part1", myObj[i].Part1, 1);
+                   setCookie("Part1img", myObj[i].Part1img, 1);
+                   setCookie("Part2", myObj[i].Part2, 1);
+                   setCookie("Part2img", myObj[i].Part2img, 1);
+                   setCookie("Part3", myObj[i].Part3, 1);
+                   setCookie("Part3img", myObj[i].Part3img, 1);
+               }
+           }
+
+           window.open("Detail.html");
+       }
+
+
+
+       function showData() {
+           // alert(ret);
+           // ret defined in HTTP2019.js for keep the response value
+           //  var myObj = JSON.parse(ret);
+           //  alert(myObj.length);
+
+
+           var tableStr = "<tr><th>编码</th> <th>宠物名</th></tr>";
+           for (i = 0; i < myObj.length; i++) {
+               //alert(myObj[i].name);
+               var trStr = "<tr>";
+               value = i + 1;
+               trStr = trStr + "<td align='center'>";
+               trStr = trStr + value;
+               trStr = trStr + "</td>";
+
+               trStr = trStr + "<td align='center'>";
+               trStr = trStr + myObj[i].Pet;
+               trStr = trStr + "</td>";
+
+               trStr = trStr + "</tr>";
+               tableStr = tableStr + trStr;
+           }
+
+
+           document.getElementById("t1").innerHTML = tableStr;
+           addRowHandlers("t1");   // add event to table t1
+
+       }
+        </script>
+</html>
